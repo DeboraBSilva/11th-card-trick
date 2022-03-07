@@ -1,7 +1,7 @@
 function Card({ card }) {
   return (
     <div>
-      <div>
+      <div className="Card">
         {card.cardValue} of {card.suit}
       </div>
     </div>
