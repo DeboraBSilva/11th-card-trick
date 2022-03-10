@@ -1,14 +1,30 @@
+import { useState } from "react";
+import ChooseRow from "../utils/chooseRow";
+import SetRows from "../utils/setRows";
 import Deck from "./deck";
 
 function CardRows({ deck }) {
-  const CARDS_PER_ROW = 7;
-  let firstCardIndex = 0;
-  const rows = [];
+  const [rowsList, setRowsList] = useState(SetRows(deck));
+  let [stepTrick, setStepTrick] = useState(0);
 
-  for (let i = 1; i <= 3; i++) {
-    rows.push(<Deck key={i} id={i} deckList={deck.slice(firstCardIndex, firstCardIndex + CARDS_PER_ROW)} />);
-    firstCardIndex += CARDS_PER_ROW;
-  }
+  const rows = rowsList.map((n, index) => {
+    return (
+      <div key={index}>
+        <button
+          key={`button-${index}`}
+          id={index}
+          className="rowButton"
+          onClick={() => {
+            setRowsList(ChooseRow(rowsList, index));
+            setStepTrick(stepTrick + 1);
+          }}
+        >
+          {index + 1}
+        </button>
+        <Deck key={`deck-${index}`} id={index} deckList={n} />
+      </div>
+    );
+  });
 
   return <div className="CardRows">{rows}</div>;
 }

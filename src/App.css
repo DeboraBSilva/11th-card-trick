@@ -12,6 +12,31 @@
   height: 100vh;
 }
 
+.CardRows > div {
+  display: flex;
+  margin: 10px;
+}
+
+.rowButton {
+  background-color: #b82626;
+  color: #fff;
+  border: #b82626;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 5px;
+  padding: 10px;
+  width: 50px;
+  font-size: 20px;
+}
+
+.rowButton:hover {
+  background-color: #d12727;
+}
+
+.rowButton:active {
+  background-color: #811010;
+}
+
 .Deck {
   display: flex;
   align-items: center;
