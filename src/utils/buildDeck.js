@@ -1,5 +1,5 @@
-const suits = ["Hearts", "Spades", "Diamonds", "Clubs"];
-const cardValues = [
+const SUITS = ["Hearts", "Spades", "Diamonds", "Clubs"];
+const CARD_VALUES = [
   "Ace",
   "2",
   "3",
@@ -16,8 +16,8 @@ const cardValues = [
 ];
 
 function buildDeck() {
-  return suits.flatMap((suit) => {
-    return cardValues.map((cardValue) => {
+  return SUITS.flatMap((suit) => {
+    return CARD_VALUES.map((cardValue) => {
       return { suit, cardValue };
     });
   });
