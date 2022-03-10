@@ -1,11 +1,10 @@
 import { useState } from "react";
-import ChooseRow from "../utils/chooseRow";
 import findChosenCard from "../utils/findChosenCard";
-import SetRows from "../utils/setRows";
-import Deck from "./deck";
+import { reorderRows, setRows } from "../utils/rows";
+import Deck from "./Deck";
 
 function CardRows({ deck, setChosenCard }) {
-  const [rowsList, setRowsList] = useState(SetRows(deck));
+  const [rowsList, setRowsList] = useState(setRows(deck));
   const [stepTrick, setStepTrick] = useState(0);
 
   const rows = rowsList.map((n, index) => {
@@ -16,9 +15,9 @@ function CardRows({ deck, setChosenCard }) {
           id={index}
           className="rowButton"
           onClick={() => {
-            const newRowsList = ChooseRow(rowsList, index)
+            const newRowsList = reorderRows(rowsList, index);
             setRowsList(newRowsList);
-            const newStepTrick = stepTrick + 1
+            const newStepTrick = stepTrick + 1;
             setStepTrick(newStepTrick);
             setChosenCard(findChosenCard(newRowsList, newStepTrick));
           }}

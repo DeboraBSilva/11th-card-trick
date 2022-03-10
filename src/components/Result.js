@@ -1,5 +1,5 @@
 import { resetTrick } from "../utils/deck";
-import Card from "./card";
+import Card from "./Card";
 
 function Result({ chosenCard, setChosenCard, setSelectedCards }) {
   return (
