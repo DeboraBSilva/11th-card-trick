@@ -18,7 +18,7 @@ function CardRows({ deck, setChosenCard }) {
           onClick={() => {
             setRowsList(ChooseRow(rowsList, index));
             setStepTrick(stepTrick + 1);
-            setChosenCard(findChosenCard(rowsList, stepTrick)); // TODO wait for stepTrick update,stepTrick must start at 1 and update card in stepTrick 3            console.log(stepTrick);
+            setChosenCard(findChosenCard(rowsList, stepTrick)); // TODO wait for stepTrick update,stepTrick must start at 1 and update card in stepTrick 3
           }}
         >
           {index + 1}

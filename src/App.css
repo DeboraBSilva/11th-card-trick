@@ -65,3 +65,22 @@
   background-color: #fff;
   margin: 2px;
 }
+
+.button--resetTrick{
+  background-color: #b82626;
+  color: #fff;
+  border: #b82626;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.rowButton:hover {
+  background-color: #d12727;
+}
+
+.rowButton:active {
+  background-color: #811010;
+}
