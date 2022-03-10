@@ -16,9 +16,11 @@ function CardRows({ deck, setChosenCard }) {
           id={index}
           className="rowButton"
           onClick={() => {
-            setRowsList(ChooseRow(rowsList, index));
-            setStepTrick(stepTrick + 1);
-            setChosenCard(findChosenCard(rowsList, stepTrick)); // TODO wait for stepTrick update,stepTrick must start at 1 and update card in stepTrick 3
+            const newRowsList = ChooseRow(rowsList, index)
+            setRowsList(newRowsList);
+            const newStepTrick = stepTrick + 1
+            setStepTrick(newStepTrick);
+            setChosenCard(findChosenCard(newRowsList, newStepTrick));
           }}
         >
           {index + 1}
