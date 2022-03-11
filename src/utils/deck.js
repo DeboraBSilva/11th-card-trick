@@ -40,4 +40,10 @@ function selectCards(deck) {
   return deck.slice(FIRST_CARD, TOTAL_CARDS);
 }
 
-export { buildDeck, shuffleDeck, selectCards };
+function resetTrick() {
+  const deck = buildDeck();
+  const shuffledDeck = shuffleDeck(deck);
+  return selectCards(shuffledDeck);
+}
+
+export { resetTrick };
