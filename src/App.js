@@ -9,9 +9,12 @@ function App() {
   const [chosenCard, setChosenCard] = useState();
 
   return (
-    <div className="App">
+    <div className="App" data-testid="gameState">
       {!chosenCard ? (
-        <CardRows deck={selectedCards} setChosenCard={setChosenCard} />
+        <CardRows
+          deck={selectedCards}
+          setChosenCard={setChosenCard}
+        />
       ) : (
         <Result
           chosenCard={chosenCard}

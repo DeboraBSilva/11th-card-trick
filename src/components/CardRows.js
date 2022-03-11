@@ -30,7 +30,7 @@ function CardRows({ deck, setChosenCard }) {
   });
 
   return (
-    <div className="CardRows">
+    <div className="CardRows" data-testid="cardRows">
       <h1>Which row your card is in?</h1>
       {rows}
     </div>

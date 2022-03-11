@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from '../App';
+import { render, screen } from "@testing-library/react";
+import App from "../App";
 
-test('renders 21 cards', () => {
-  render(<App />);
-  const numberOfCards = screen.getAllByRole('card').length;
-  expect(numberOfCards).toBe(21);
+describe("App Component", () => {
+  test("renders correct", () => {
+    render(<App />);
+    const gameStateElement = screen.getByTestId("gameState");
+    expect(gameStateElement).toBeInTheDocument();
+  });
 });
