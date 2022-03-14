@@ -18,6 +18,7 @@ describe("#reorderRows", () => {
         ]);
       });
     });
+    
     describe("and chosen index is 2", () => {
       const MOCK_CHOSEN_INDEX = 2;
       test("returns reordered rows", () => {
@@ -28,6 +29,7 @@ describe("#reorderRows", () => {
         ]);
       });
     });
+
     describe("and chosen index is 3", () => {
       const MOCK_CHOSEN_INDEX = 3;
       test("returns reordered rows", () => {
@@ -39,9 +41,7 @@ describe("#reorderRows", () => {
       });
     });
   });
-});
 
-describe("#setRows", () => {
   describe("when deck is invalid", () => {
     const MOCK_INVALID_DECK = [[], [], []];
     const MOCK_CHOSEN_INDEX = 1;
@@ -53,7 +53,9 @@ describe("#setRows", () => {
       ]);
     });
   });
+});
 
+describe("#setRows", () => {
   describe("when deck is valid", () => {
     const MOCK_VALID_DECK = [0, 1, 2, 3, 4, 5, 6, 7, 8];
     test("returns an array with 3 arrays", () => {
