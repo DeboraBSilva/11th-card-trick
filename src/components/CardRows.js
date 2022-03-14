@@ -12,7 +12,7 @@ function CardRows({ deck, setChosenCard }) {
       <div key={index}>
         <button
           key={`button-${index}`}
-          id={index}
+          data-testid={index}
           className="rowButton"
           onClick={() => {
             const newRowsList = reorderRows(rowsList, index);
@@ -30,7 +30,7 @@ function CardRows({ deck, setChosenCard }) {
   });
 
   return (
-    <div className="CardRows">
+    <div className="CardRows" data-testid="cardRows">
       <h1>Which row your card is in?</h1>
       {rows}
     </div>
