@@ -1,4 +1,14 @@
-function SetRows(deck) {
+function reorderRows(rows, chosenIndex) {
+  if (chosenIndex === 0) {
+    return setRows([...rows[1], ...rows[0], ...rows[2]]);
+  } else if (chosenIndex === 1) {
+    return setRows([...rows[0], ...rows[1], ...rows[2]]);
+  } else {
+    return setRows([...rows[1], ...rows[2], ...rows[0]]);
+  }
+}
+
+function setRows(deck) {
   const NUMBER_OF_ROWS = 3;
   return deck.reduce(
     (acc, element, index) => {
@@ -14,4 +24,4 @@ function SetRows(deck) {
   );
 }
 
-export default SetRows;
+export { reorderRows, setRows };

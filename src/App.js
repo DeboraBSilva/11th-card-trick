@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
-import CardRows from "./components/cardRows";
-import Result from "./components/result";
+import CardRows from "./components/CardRows";
+import Result from "./components/Result";
 import { resetTrick } from "./utils/deck";
 
 function App() {
